@@ -50,7 +50,7 @@ class HomeController extends Controller
 
         // Serializacion
         // dd($users->toArray());
-        dd($users->toJson());
+        // dd($users->toJson());
         
         return view('home',[
             'posts'=> $posts,

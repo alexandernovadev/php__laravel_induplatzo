@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     @foreach ($posts as $post)
-                        *{{$post->id}} -- {{$post->title}}  
+                        *{{$post->id}} -- {{$post->title}}// {{$post->get_title}}
                         USER: {{$post->user_id}} |
 
                         <strong>{{ !is_null($post->user) ? $post->user->name : 'SIN NAME' }}</strong>

@@ -73,7 +73,7 @@
                             @foreach($users as $user)
                             <tr>
                                 <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->name }}|{{ $user->get_name }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
                                     <form action="{{ route('user.destroy', $user) }}" method="POST">

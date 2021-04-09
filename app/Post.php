@@ -12,4 +12,10 @@ class Post extends Model
     {
         return $this->belongsTo(user::class);
     }
-}
+
+    public function getGetTitleAttribute()
+    {
+        return strtoupper($this->title);
+    }
+    
+}   

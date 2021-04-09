@@ -37,8 +37,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * One User has many posts
+     * @return /relation with post class
+     * 
+     */
     public function posts()
     {
         return $this->hasMany(Post::class);
+    }
+
+    public function getGetNameAttribute()
+    {
+        return strtoupper($this->name);
+    }
+
+    public function setNameAttribute($value)
+    {
+        // $this->attributes['name'] = strtoupper($value);
+        // $this->attributes['name'] = strtolower($value);
+        $this->attributes['name'] = ucfirst($value);
     }
 }
