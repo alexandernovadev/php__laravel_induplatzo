@@ -19,33 +19,33 @@ Orden Primero carga las librerias el escuchador
 
  GENERACION de factories
 
-crea 12 usuarios
+## crea 12 usuarios
     factory(App\User::class,12)->create()
 
-Genera un controllador con model
+## Genera un controllador con model
     php artisan make:controller PageController --resource --model=Page
 
-Crear una tabla
+## Crear una tabla
 php artisan make:migration create_pages_table
 
-Con modelo  
+## Con modelo  
 php artisan make:migration create_pages_table --create=users
 
-Crear un archivo de validacion 
+## Crear un archivo de validacion 
 php artisan make:request PostRequest
 
-Instalr la UI que ya tiene un UI para login
+## Instalr la UI que ya tiene un UI para login
 composer require laravel/ui --dev
 
-Crear la UI de auth con boostrap
+## Crear la UI de auth con boostrap
 --*Tambien se puede con vue react
 
 php artisan ui vue|boostrap|react --auth
 
-Crear un modelo y ver ayuda
+## Crear un modelo y ver ayuda
 php artisan make:model -h
 
-Crear una refresh de una migracion PERO OJO BOORRA TODO
+## Crear una refresh de una migracion PERO OJO BOORRA TODO
 php artisan migrate:refresh 
-Haga una semillero
+## Haga una semillero
 php artisan migrate:refresh --seed
