@@ -49,3 +49,8 @@ php artisan make:model -h
 php artisan migrate:refresh 
 ## Haga una semillero
 php artisan migrate:refresh --seed
+
+## Maneras de hacer DEBUG
+print_r()
+var_dump()
+dd()

@@ -14,12 +14,22 @@
                         </div>
                     @endif
                     @foreach ($posts as $post)
-                        *{{$post->id}} -- {{$post->title}} <br>
+                        *{{$post->id}} -- {{$post->title}}  
+                        USER: {{$post->user_id}} |
+
+                        <strong>{{ !is_null($post->user) ? $post->user->name : 'SIN NAME' }}</strong>
+                    
+                        <br>
                     @endforeach
                     {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
+        <div class="col-md-4">
+            @foreach ($users as $user)
+                {{$user->name}} | <b>{{$user->posts->count() }}</b><hr>
+            @endforeach
+        </div>  
     </div>
 </div>
 @endsection
