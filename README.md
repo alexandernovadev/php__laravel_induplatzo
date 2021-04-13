@@ -19,6 +19,10 @@ Orden Primero carga las librerias el escuchador
 
  GENERACION de factories
 
+## Add Field
+php artisan migrate:make add_paid_to_users
+php artisan make:migration add_paid_to_users_table --table=users
+
 ## crea 12 usuarios
     factory(App\User::class,12)->create()
 
